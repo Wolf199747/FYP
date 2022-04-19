@@ -735,15 +735,7 @@ ul.CTAs a {
   border-radius: 15px 15px 0 0;
 
 }
-.car-1{
-  background-image: url('C:\Users\hadi\Desktop\FYP_Dev\frontend\public\images\gilgit.jpg');
-}
-.car-2{
-  background-image: url('C:\Users\hadi\Desktop\FYP_Dev\frontend\public\images\kaghan.jpg');
-}
-.car-3{
-  background-image: url('C:\Users\hadi\Desktop\FYP_Dev\frontend\public\images\murree.jpg');
-}
+
 .card h2{
   padding: 10px;
 }
