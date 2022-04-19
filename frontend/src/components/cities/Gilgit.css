@@ -12,15 +12,15 @@
   }
   
   .carousel .carousel-item:first-of-type {
-    background-image: url("C:\Users\hadi\Desktop\FYP_Dev\frontend\public\images\gilgit.jpg");
+  
   }
   
   .carousel  .carousel-item:nth-of-type(2) {
-    background-image: url("C:\Users\hadi\Desktop\FYP_Dev\frontend\public\images\gilgit2.jpg");
+    
   }
   
   .carousel .carousel-item:last-of-type {
-    background-image: url("C:\Users\hadi\Desktop\FYP_Dev\frontend\public\images\gilgit3.jpg");
+    
   }
   
   .carousel-control-prev-icon, .carousel-control-next-icon {
