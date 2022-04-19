@@ -1,0 +1,58 @@
+[
+    {
+        "name": "hadi",
+        "price": "11000",
+        "description":"Good hogya",
+        "ratings":4.5,
+        
+        "category":"Tour",
+        "location":"Rawalpindi",
+        "seller":"ebay" ,
+        "date":"14 to 19 January",
+        "duration":"4 Days",
+        "stock":112233,
+        "numOfReviews": 6,
+        "reviews":[]
+
+        
+
+
+    },{
+        "name": "hadi",
+        "price": "12000",
+        "description":"Good hogya",
+        "ratings":4.5,
+        
+        "category":"Travel",
+        "location":"Rawalpindi",
+        "seller":"ebay" ,
+        "date":"14 to 19 January",
+        "duration":"4 Days",
+        "stock":112233,
+        "numOfReviews": 6,
+        "reviews":[]
+
+        
+
+
+    },
+    {
+        "name": "zebi",
+        "price": "13000",
+        "description":"Good hogya",
+        "ratings":4.5,
+        
+        "category":"Travel",
+        "location":"Islamabad",
+        "seller":"ebay" ,
+        "date":"11 to 19 January",
+        "duration":"7 Days",
+        "stock":112233,
+        "numOfReviews": 6,
+        "reviews":[]
+
+        
+
+
+    }
+]
