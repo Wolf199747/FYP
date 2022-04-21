@@ -9,14 +9,14 @@ const Footer = () => {
   	 		<div className="footer-col">
   	 			<h4>company</h4>
   	 			<ul>
-  	 				<li><a href="#">Team Members</a></li>
+  	 				<li>< Link to="/team">Team Members</Link></li>
   	 			
   	 			</ul>
   	 		</div>
   	 		<div className="footer-col">
   	 			<h4>get help</h4>
   	 			<ul>
-  	 				<li><a href="#">Pricing Policy for Agents</a></li>
+  	 				<li><Link to="/pricing">Pricing Policy for Agents</Link></li>
   	 				
   	 			</ul>
   	 		</div>

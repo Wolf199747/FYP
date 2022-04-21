@@ -31,6 +31,8 @@ import UpdateUser from './components/tourAgent/UpdateUser'
 import Kaghan from './components/cities/Kaghan'
 import Gilgit from './components/cities/Gilgit'
 import Murree from './components/cities/Murree'
+import Team from './components/team/Team'
+import Pricing from './components/pricing/Pricing'
 import store from './store'
 import axios from 'axios' 
 import {Elements} from '@stripe/react-stripe-js'
@@ -91,6 +93,8 @@ function App() {
     <Route path="/cities/kaghan" component={Kaghan}  />
     <Route path="/cities/murree" component={Murree}  />
     
+    <Route path="/team" component={Team}  />
+    <Route path="/pricing" component={Pricing}  />
      <Footer/>
     </div>
     </Router>
