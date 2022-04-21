@@ -96,7 +96,7 @@ const ProductDetails = ({match}) => {
         <h4 className="mt-2">location:</h4>
         <p>{product.location}</p>
         <hr/>
-        <h4 className="mt-2">Duration:</h4>
+        <h4 className="mt-2">Duration(days):</h4>
         <p>{product.duration}</p>
         <hr/>
         <h4 className="mt-2">Persons Capacity:</h4>
