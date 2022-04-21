@@ -31,8 +31,10 @@ const ConfirmOrder = ({history}) => {
                 <h4 className="mb-3">Personal Details</h4>
                 <p><b>Name:</b> {user && user.name} </p>
                 <p><b>Phone:</b> {personalInfo.phoneNo}</p>
-                <p className="mb-4"><b>User Address:</b>{`${personalInfo.address},${personalInfo.city},${personalInfo.postalCode}`}</p>
-                <p className="mb-4"><b>Package Date:</b>{personalInfo.packageDate}</p>
+                <p className="mb-4"><b>User Address:</b> {`${personalInfo.address},${personalInfo.city},${personalInfo.postalCode}`}</p>
+                <p className="mb-4"><b>Package Date:</b> {personalInfo.packageDate}</p>
+                <p className="mb-4"><b>No Of Adults:</b> {personalInfo.noOfAdults}</p>
+                <p className="mb-4"><b>No Of Kids:</b> {personalInfo.noOfKids}</p>
                 <hr />
                 <h4 className="mt-4">Your Cart Items:</h4>
 
@@ -66,7 +68,7 @@ const ConfirmOrder = ({history}) => {
 			
 			<div className="col-12 col-lg-3 my-4">
                     <div id="order_summary">
-                        <h4>Order Summary</h4>
+                        <h4>Package Summary</h4>
                         <hr />
                         <p>Subtotal:  <span className="order-summary-values">Rs.{itemsPrice}</span></p>
                     

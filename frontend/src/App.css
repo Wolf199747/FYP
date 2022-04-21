@@ -699,6 +699,7 @@ ul.CTAs a {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  background-image: url('../../frontend/public/images/asd.jpg');
   align-items: center;
   display: flex;
   background-color: #65C18C;
@@ -735,7 +736,15 @@ ul.CTAs a {
   border-radius: 15px 15px 0 0;
 
 }
-
+.car-1{
+  background-image: url('../../frontend/public/images/gilgit.jpg');
+}
+.car-2{
+  background-image: url('../../frontend/public/images/kaghan.jpg');
+}
+.car-3{
+  background-image: url('../../frontend/public/images/murree.jpg');
+}
 .card h2{
   padding: 10px;
 }

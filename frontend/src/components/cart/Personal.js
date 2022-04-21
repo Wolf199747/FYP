@@ -17,13 +17,15 @@ const Personal = ({history}) => {
     const [phoneNo,setPhoneNo]=useState(personalInfo.phoneNo)
     const [postalCode,setPostalCode] = useState(personalInfo.postalCode)
     const [packageDate,setPackageDate]= useState(new Date());
+    const [noOfAdults,setNoOfAdults]= useState(0);
+    const [noOfKids,setNoOfKids]= useState(0);
 
     const dispatch=useDispatch();
 
     const submitHandler = (e) =>{
         e.preventDefault()
 
-        dispatch(savePersonalInfo({address,city,phoneNo,postalCode,packageDate}))
+        dispatch(savePersonalInfo({address,city,phoneNo,postalCode,packageDate,noOfAdults,noOfKids}))
 
         history.push('/order/confirm')
     }
@@ -86,14 +88,35 @@ const Personal = ({history}) => {
                             <label htmlFor="package_date_field">Package Date</label>
                             <input
                                 type="date"
-                                id="postal_code_field"
+                                id="date_field"
                                 className="form-control"
                                 value={packageDate}
                                 onChange={(e)=>{setPackageDate(e.target.value)}}
                                 required
                             />
                         </div>
-
+                        <div className="form-group">
+                            <label htmlFor="no_of_adults_field">Number of Adults</label>
+                            <input
+                                type="number"
+                                id="no_of_adults_field"
+                                className="form-control"
+                                value={noOfAdults}
+                                onChange={(e)=>{setNoOfAdults(e.target.value)}}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="no_of_kids_field">Number of Kids</label>
+                            <input
+                                type="number"
+                                id="no_of_kids_field"
+                                className="form-control"
+                                value={noOfKids}
+                                onChange={(e)=>{setNoOfKids(e.target.value)}}
+                                required
+                            />
+                        </div>
                         <button
                             id="shipping_btn"
                             type="submit"

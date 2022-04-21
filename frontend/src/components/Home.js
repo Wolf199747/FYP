@@ -107,7 +107,7 @@ const Home = ({match}) => {
             <h2>Murree</h2>
             <Link to="/cities/murree" className="cardAnchor">Read More</Link>
           </div>
-
+          
         </section>
           
           )}
@@ -172,7 +172,7 @@ const Home = ({match}) => {
     <div className="col-6 col-md-5">
       <div className="row">
         {products && products.map(product =>(
-            <Product key={product._id} product={product} col={6}/>
+            <Product key={product._id} product={product} col={8}/>
            ))}
       </div>
     </div>
