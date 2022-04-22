@@ -18,7 +18,7 @@ const Footer = () => {
   	 		<div className="footer-col">
   	 			<h4>get help</h4>
   	 			<ul>
-  	 				<li><Link to="/pricing">Pricing Policy for Agents</Link></li>
+  	 				<li><Link to="/pricing">Policy for Agents</Link></li>
   	 				
   	 			</ul>
   	 		</div>
