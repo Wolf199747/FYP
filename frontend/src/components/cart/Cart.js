@@ -91,7 +91,7 @@ const Cart = ({history}) => {
 
             <div className="col-12 col-lg-3 my-4">
                 <div id="order_summary">
-                    <h4>Packa Summary</h4>
+                    <h4>Package Summary</h4>
                     <hr />
                     <p>Subtotal:  <span className="order-summary-values">{cartItems.reduce((acc,item)=>(acc+Number(item.quantity)),0)} (Units)</span></p>
                     <p>Est. total: <span className="order-summary-values">Rs.{cartItems.reduce((acc,item)=>acc+item.quantity*item.price,0)}</span></p>
