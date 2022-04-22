@@ -1,8 +1,12 @@
 import React from 'react'
 
 import './Murree.css'
+
+import { motion } from 'framer-motion'
 const Murree = () => {
   return (
+    
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
     <div className="carouselDiv">
       <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
     <ol className="carousel-indicators">
@@ -38,7 +42,7 @@ const Murree = () => {
     </ul>
 </div>
     </div>
-    
+    </motion.div>
   )
 }
 

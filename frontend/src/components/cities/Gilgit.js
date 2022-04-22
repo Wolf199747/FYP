@@ -1,7 +1,10 @@
 import React from 'react'
 import './Gilgit.css'
+import { motion } from 'framer-motion'
 const Gilgit = () => {
   return (
+    
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
     <div className="carouselDiv">
       <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
     <ol className="carousel-indicators">
@@ -37,7 +40,7 @@ const Gilgit = () => {
     </ul>
 </div>
     </div>
-    
+    </motion.div>
   )
 }
 
