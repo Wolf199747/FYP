@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { useDispatch,useSelector } from 'react-redux'
 import Loader from '../layout/Loader'
 import {getOrderDetails} from '../../actions/orderActions'
-
+import { motion } from 'framer-motion'
 const OrderDetails = ({match}) => {
 
     
@@ -23,6 +23,7 @@ const OrderDetails = ({match}) => {
     
   return (
     
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
     <Fragment>
       
       {loading? <Loader/>:(
@@ -85,6 +86,7 @@ const OrderDetails = ({match}) => {
            </Fragment>
       )}
     </Fragment>
+    </motion.div>
   )
 }
 

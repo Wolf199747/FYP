@@ -37,6 +37,8 @@ import store from './store'
 import axios from 'axios' 
 import {Elements} from '@stripe/react-stripe-js'
 import {loadStripe} from '@stripe/stripe-js'
+
+import {AnimatePresence} from 'framer-motion'
 function App() {
 
   const [stripeApiKey,setStripeApiKey]=useState('');
@@ -51,6 +53,7 @@ function App() {
     getStripeApiKey();
   },[])
   return (
+    <AnimatePresence exitBeforeEnter >
     <Router>
     <div className="App">
      <Header/>
@@ -98,6 +101,7 @@ function App() {
      <Footer/>
     </div>
     </Router>
+    </AnimatePresence>
   );
 }
 

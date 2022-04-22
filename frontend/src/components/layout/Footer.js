@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react'
 import {Link} from 'react-router-dom'
+import { motion } from 'framer-motion'
 const Footer = () => {
   return (
+	<motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
     <Fragment>
           <footer className="footer">
           <div className="container">
@@ -29,6 +31,7 @@ const Footer = () => {
       </p>
     </footer>
     </Fragment>
+	</motion.div>
   )
 }
 

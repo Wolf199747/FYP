@@ -1,7 +1,9 @@
 import React from 'react'
-
+import { motion } from 'framer-motion'
 const Pricing = () => {
   return (
+    
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
     <div className="wrapper">
     
     <div className="table premium">
@@ -32,6 +34,7 @@ const Pricing = () => {
     </div>
    
   </div>
+  </motion.div>
   )
 }
 

@@ -8,6 +8,8 @@ import { logout } from '../../actions/userActions'
 import Search from './Search'
 import '../../App.css'
 
+import { motion } from 'framer-motion'
+
 
 const Header = () => {
   const alert=useAlert();
@@ -23,6 +25,8 @@ const Header = () => {
     alert.success('Logged Out')
   }
   return (
+    
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
     <Fragment>
       <head>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -85,6 +89,7 @@ const Header = () => {
     </nav>
     
     </Fragment>
+      </motion.div>
   )
 }
 

@@ -2,11 +2,13 @@ import React,{Fragment} from 'react'
 import Loader from '../layout/Loader'
 import {useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
+import { motion } from 'framer-motion'
 const Profile = () => {
 
     const {user,loading} = useSelector(state=>state.auth)
   return (
       
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:1}}>
     <Fragment>
         <h4 className="TAh4" style={{textAlign:'center'}}>Email us at <a href="mailto:hsh18922@gmail.com"><span id="TAEmail">hsh18922@gmail.com</span></a> to apply as Tour Agent </h4>
         
@@ -51,6 +53,7 @@ const Profile = () => {
                    </Fragment>
           )}
     </Fragment>
+    </motion.div>
   )
 }
 

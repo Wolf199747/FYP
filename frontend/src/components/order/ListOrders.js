@@ -6,6 +6,7 @@ import { useDispatch,useSelector } from 'react-redux'
 import Loader from '../layout/Loader'
 import { useAlert } from 'react-alert'
 import {myOrders,clearErrors} from '../../actions/orderActions'
+import { motion } from 'framer-motion'
 
 const ListOrders = () => {
 
@@ -72,6 +73,8 @@ const ListOrders = () => {
         return data;
     }
   return (
+      
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
     <Fragment>
       <h1 className="mt-5">My Orders</h1>
       {loading?<Loader/>:(
@@ -86,6 +89,7 @@ const ListOrders = () => {
           />
       )} 
     </Fragment>
+    </motion.div>
   )
 }
 

@@ -4,6 +4,7 @@ import Product from './product/Product'
 import {useDispatch,useSelector} from 'react-redux'
 import { useAlert } from 'react-alert';
 import { getProducts } from '../actions/productActions'
+import { motion } from 'framer-motion'
 import Loader from './layout/Loader';
 import {Link} from 'react-router-dom'
 
@@ -49,6 +50,7 @@ const Home = ({match}) => {
     }
   return (
     
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
      <Fragment>
        {currentPage===1 && !keyword && ( 
        <div className="imgBx">
@@ -206,6 +208,7 @@ const Home = ({match}) => {
       )}
       
     </Fragment>
+      </motion.div>
   )
 }
 

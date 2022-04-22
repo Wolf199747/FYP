@@ -7,6 +7,8 @@ import { useDispatch,useSelector } from 'react-redux'
 import {getTourAgentProducts} from '../../actions/productActions'
 import {allOrders} from '../../actions/orderActions'
 import { allUsers } from '../../actions/userActions'
+
+import { motion } from 'framer-motion'
 const Dashboard = () => {
     const dispatch= useDispatch();
 
@@ -26,6 +28,8 @@ const Dashboard = () => {
         dispatch(allUsers())
     },[dispatch,])
   return (
+      
+    <motion.div initial={{scaleX:0}} animate={{scaleX:1}} exit={{scaleX:0}} transition={{duration:0.5}}>
     <Fragment>
       <div className="row">
           <div className="col-12 col-md-2">
@@ -124,6 +128,7 @@ const Dashboard = () => {
                 </div>
       </div>
     </Fragment>
+    </motion.div>
   )
 }
 

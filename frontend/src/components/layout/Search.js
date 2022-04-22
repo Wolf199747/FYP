@@ -1,5 +1,6 @@
 import React,{useState}from 'react'
 
+import { motion } from 'framer-motion';
 const Search = ({history}) => {
 
     const [keyword,setKeyword]=useState('');
@@ -15,6 +16,7 @@ const Search = ({history}) => {
     }
   return (
     
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
       <form onSubmit={searchHandler}>
 
 <div className="input-group">
@@ -32,7 +34,7 @@ const Search = ({history}) => {
           </div>
         </div>
       </form>
-    
+      </motion.div>
   )
 }
 

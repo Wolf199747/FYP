@@ -2,7 +2,7 @@ import React,{Fragment,useState,useEffect} from 'react'
 import { useAlert } from 'react-alert'
 import { useDispatch,useSelector } from 'react-redux'
 import {Link} from 'react-router-dom'
-
+import { motion } from 'framer-motion'
 import {register,clearErrors} from '../../actions/userActions'
 
 const Register = ({history}) => {
@@ -60,6 +60,8 @@ const Register = ({history}) => {
         }
     }
   return (
+    
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
     <Fragment>
          <div className="row wrapper">
 		<div className="col-10 col-lg-5">
@@ -137,11 +139,12 @@ const Register = ({history}) => {
             >
               REGISTER
             </button>
-            <Link to="/login" className="float-right mt-3">Already have an account? Click to login</Link>
+            <Link to="/login" className="float-right mt-3">Already have an account? Login!</Link>
           </form>
 		  </div>
     </div>
     </Fragment>
+    </motion.div>
   )
 }
 

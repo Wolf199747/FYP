@@ -3,7 +3,7 @@ import { useAlert } from 'react-alert'
 import { useDispatch,useSelector } from 'react-redux'
 import Loader from '../layout/Loader';
 import {Link} from 'react-router-dom'
-
+import { motion } from 'framer-motion';
 import {login,clearErrors} from '../../actions/userActions'
 
 const Login = ({history,location}) => {
@@ -33,6 +33,8 @@ const Login = ({history,location}) => {
         dispatch(login(email,password))
     }
   return (
+    
+    <motion.div initial={{scaleY:0}} animate={{scaleY:1}} exit={{scaleY:0}} transition={{duration:0.5}}>
    <Fragment>
       {loading?<Loader />:(
           <Fragment>
@@ -80,6 +82,7 @@ const Login = ({history,location}) => {
                </Fragment>
       )}
 </Fragment>
+</motion.div>
   )
 }
 
