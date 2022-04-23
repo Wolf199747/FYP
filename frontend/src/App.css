@@ -1220,3 +1220,8 @@ margin-bottom: 20px;
     width: 100%;
 }
 }
+
+#itemName{
+  font-weight:normal;
+  color: #146356;
+}

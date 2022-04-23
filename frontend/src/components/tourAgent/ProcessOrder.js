@@ -63,8 +63,9 @@ const ProcessOrder = ({match}) => {
     <p><b>Name:</b> {user && user.name}</p>
     <p><b>Phone:</b> {personalInfo && personalInfo.phoneNo}</p>
     <p className="mb-4"><b>Address:</b>{personalDetails}</p>
+    <p><b>No OF Adults:</b> {personalInfo && personalInfo.noOfAdults}</p>
+    <p><b>No OF Kids:</b> {personalInfo && personalInfo.noOfKids}</p>
     <p><b>Amount:</b> Rs.{totalPrice}</p>
-
     <hr />
                         <h4 className="my-4">Payment</h4>
                         <p className={isPaid?"greenColor":"redColor"} ><b>{isPaid?"Paid":"Not Paid"}</b></p>

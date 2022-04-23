@@ -30,7 +30,7 @@ const Sidebar = () => {
         )}
         {user.role==='tourAgent' &&(
         <li>
-            <Link to="/tourAgent/orders"><i className="fa fa-shopping-basket"></i> Orders</Link>
+            <Link to="/tourAgent/orders"><i className="fa fa-shopping-basket"></i> Bookings</Link>
         </li>
          )}
         {user.role==='admin' &&(

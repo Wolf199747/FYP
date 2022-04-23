@@ -4,14 +4,14 @@ import { useDispatch,useSelector } from 'react-redux'
 
 import { savePersonalInfo} from '../../actions/cartActions'
 
-
+import { Link } from 'react-router-dom';
 import CheckoutSteps from './CheckoutSteps';
 
 import "react-datepicker/dist/react-datepicker.css";
 
 const Personal = ({history}) => {
     const {personalInfo} = useSelector(state=>state.cart)
-
+    const {cartItems} = useSelector(state=>state.cart)
     const [address,setAddress]=useState(personalInfo.address)
     const [city,setCity] = useState(personalInfo.city)
     const [phoneNo,setPhoneNo]=useState(personalInfo.phoneNo)
@@ -29,6 +29,7 @@ const Personal = ({history}) => {
 
         history.push('/order/confirm')
     }
+    
   return (
     <Fragment>
         <CheckoutSteps personal />
@@ -95,8 +96,9 @@ const Personal = ({history}) => {
                                 required
                             />
                         </div>
+                        {cartItems.map(item=>(
                         <div className="form-group">
-                            <label htmlFor="no_of_adults_field">Number of Adults</label>
+                            <label htmlFor="no_of_adults_field">Number of Adults (Max Capacity  For  <span id="itemName"><Link to={`/product/${item.product}`}>{item.name}</Link></span> is {item.noOfPersons})</label>
                             <input
                                 type="number"
                                 id="no_of_adults_field"
@@ -105,9 +107,9 @@ const Personal = ({history}) => {
                                 onChange={(e)=>{setNoOfAdults(e.target.value)}}
                                 required
                             />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="no_of_kids_field">Number of Kids</label>
+                        </div>))}
+                        {cartItems.map(item=>(<div className="form-group">
+                            <label htmlFor="no_of_kids_field">Number of Kids (Max Capacity  For  <span id="itemName"><Link to={`/product/${item.product}`}>{item.name}</Link></span> is {item.noOfPersons})</label>
                             <input
                                 type="number"
                                 id="no_of_kids_field"
@@ -116,7 +118,8 @@ const Personal = ({history}) => {
                                 onChange={(e)=>{setNoOfKids(e.target.value)}}
                                 required
                             />
-                        </div>
+                        </div>))}
+                        
                         <button
                             id="shipping_btn"
                             type="submit"

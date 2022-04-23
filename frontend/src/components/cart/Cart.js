@@ -67,7 +67,7 @@ const Cart = ({history}) => {
                         <div className="col-4 col-lg-2 mt-4 mt-lg-0">
                             <p id="card_item_price">{item.price}</p>
                         </div>
-
+                        
                         <div className="col-4 col-lg-3 mt-4 mt-lg-0">
                             <div className="stockCounter d-inline">
                                 <span className="btn btn-danger minus" onClick={()=>decreaseQuantity(item.product ,item.quantity)}>-</span>
@@ -80,7 +80,9 @@ const Cart = ({history}) => {
                         <div className="col-4 col-lg-1 mt-4 mt-lg-0">
                             <i id="delete_cart_item" onClick={()=>removeCartItemHandler(item.product)} className="fa fa-trash btn btn-danger"></i>
                         </div>
-
+                        <div className="col-5 col-lg-3">
+                            <p>Persons Capacity:{item.noOfPersons}</p>
+                        </div>
                     </div>
                 </div>
                 <hr />

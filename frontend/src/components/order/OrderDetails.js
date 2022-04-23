@@ -37,9 +37,11 @@ const OrderDetails = ({match}) => {
                         <h4 className="mb-4">Personal Info</h4>
                         <p><b>Name:</b> {user && user.name}</p>
                         <p><b>Phone:</b> {personalInfo && personalInfo.phoneNo}</p>
-                        <p className="mb-4"><b>Address:</b></p>
+                        <p className="mb-4"><b>Address: {personalInfo && `${personalInfo.address},${personalInfo.city},${personalInfo.postalCode}` }</b></p>
                         <p><b>Amount:</b> Rs.{totalPrice}</p>
-
+                        
+                        <p><b>No OF Adults:</b> {personalInfo && personalInfo.noOfAdults}</p>
+                        <p><b>No OF Kids:</b> {personalInfo && personalInfo.noOfKids}</p>
                         <hr />
 
                         <h4 className="my-4">Payment</h4>

@@ -22,6 +22,14 @@ const orderSchema = mongoose.Schema({
         packageDate:{
             type:Date,
             required:true
+        },
+        noOfAdults:{
+            type:Number,
+            required:true
+        },
+        noOfKids:{
+            type:Number,
+            required:true
         }
     },
     user:{
